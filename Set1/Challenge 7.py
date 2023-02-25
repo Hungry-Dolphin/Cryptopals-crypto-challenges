@@ -1,8 +1,6 @@
 import os
 import codecs
 from Crypto.Cipher import AES
-from Crypto.Util.Padding import pad
-import binascii
 
 def main():
     message = open(os.path.join(os.getcwd(), 'Input/Set1/Input 7.txt'), 'rb').read()
