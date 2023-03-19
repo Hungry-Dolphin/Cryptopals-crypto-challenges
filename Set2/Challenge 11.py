@@ -2,7 +2,7 @@ import secrets
 import random
 import codecs
 from Crypto.Cipher import AES
-from Crypto.Util.Padding import pad, unpad
+from Crypto.Util.Padding import pad
 
 def gen_ran_AES(size):
     return secrets.token_bytes(size)
@@ -10,7 +10,6 @@ def gen_ran_AES(size):
 def gen_ran_bytes(min, max):
     size = random.randint(min, max) 
     return secrets.token_bytes(size)
-
 
 def encryption_oracle(message):
     key = gen_ran_AES(16)
